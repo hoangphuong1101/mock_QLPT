@@ -8,7 +8,7 @@ public class SQLServer {
 
 	public static String url = "jdbc:sqlserver://localhost:1433;databaseName=QLPT1";
 	public static String userName = "sa";
-	public static String password = "123";
+	public static String password = "gatrong162";
 
 	public static Connection connection;
 
@@ -16,13 +16,13 @@ public class SQLServer {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			connection = DriverManager.getConnection(url, userName, password);
-			// System.out.println("Ket noi thanh cong");
+			 System.out.println("Ket noi thanh cong");
 		} catch (SQLException e) {
 			e.printStackTrace();
-			// System.out.println("Ket noi loi");
+			 System.out.println("Ket noi loi");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-			// System.out.println("JDBC loi");
+			 System.out.println("JDBC loi");
 		}
 	}
 
@@ -33,5 +33,7 @@ public class SQLServer {
 			e.printStackTrace();
 		}
 	}
-
+//	public static void main(String[] args) {
+//		connect();
+//	}
 }
